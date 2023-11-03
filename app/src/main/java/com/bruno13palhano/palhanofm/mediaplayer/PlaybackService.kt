@@ -58,9 +58,15 @@ class PlaybackService : MediaSessionService() {
     private fun initializeSessionAndPlayer() {
         player = ExoPlayer.Builder(this)
             .setAudioAttributes(AudioAttributes.DEFAULT, true)
+            .setHandleAudioBecomingNoisy(true)
             .build()
 
-        val mediaItem = MediaItem.fromUri("https://stm002.smghosting.com.br:7332/stream/")
+        val mediaItem = MediaItem.Builder()
+            .setLiveConfiguration(
+                MediaItem.LiveConfiguration.Builder().setMaxPlaybackSpeed(1.02f).build()
+            )
+            .setUri("https://stm002.smghosting.com.br:7332/stream/")
+            .build()
         player.addMediaItem(mediaItem)
         player.prepare()
         player.play()
@@ -69,7 +75,7 @@ class PlaybackService : MediaSessionService() {
             TaskStackBuilder.create(this).run {
                 addNextIntent(Intent(this@PlaybackService, MainActivity::class.java))
 
-                getPendingIntent(0, FLAG_IMMUTABLE or FLAG_UPDATE_CURRENT)
+                getPendingIntent(0, FLAG_UPDATE_CURRENT)
             }
 
         mediaSession = MediaSession
