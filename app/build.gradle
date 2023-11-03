@@ -92,4 +92,5 @@ dependencies {
     implementation "androidx.media3:media3-ui:$media_version"
     implementation "androidx.media3:media3-exoplayer-dash:$media_version"
     implementation "androidx.media3:media3-session:$media_version"
+    implementation "androidx.media3:media3-common:$media_version"
 }
