@@ -8,11 +8,13 @@ import android.app.PendingIntent.FLAG_UPDATE_CURRENT
 import android.app.TaskStackBuilder
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.MediaItem
+import androidx.media3.common.MediaMetadata
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.common.util.Util
 import androidx.media3.exoplayer.ExoPlayer
@@ -65,7 +67,14 @@ class PlaybackService : MediaSessionService() {
             .setLiveConfiguration(
                 MediaItem.LiveConfiguration.Builder().setMaxPlaybackSpeed(1.02f).build()
             )
-            .setUri("https://stm002.smghosting.com.br:7332/stream/")
+            .setUri("https://stm12.xcast.com.br:10888/stream")
+            .setMediaMetadata(
+                MediaMetadata.Builder()
+                    .setArtworkUri(
+                        Uri.parse("https://www.palhanofm.adcast.com.br/admin/data/img/gallery/Slider/DD.PNG")
+                    )
+                    .build()
+            )
             .build()
         player.addMediaItem(mediaItem)
         player.prepare()
