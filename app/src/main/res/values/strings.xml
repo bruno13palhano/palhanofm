@@ -5,4 +5,12 @@
     <string name="notification_content_text">Press on the play button on the media notification if it
     is still present, otherwise please open the app to start the playback and re-connect the session
     to the controller</string>
+    <string name="home_label">Home</string>
+    <string name="whatsapp_label">Whats\'App</string>
+    <string name="schedules_label">Schedules</string>
+    <string name="settings_label">Settings</string>
+    <string name="app_logo_label">App\'s logo</string>
+    <string name="hello_label">Hello</string>
+    <string name="request_song_description">Request a song</string>
+    <string name="drawer_menu_description">Drawer menu</string>
 </resources>
