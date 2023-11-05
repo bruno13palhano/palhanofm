@@ -32,7 +32,7 @@ fun MainNavGraph(
         }
 
         composable(route = MainDestinations.SETTINGS_ROUTE) {
-            showBottomMenu(true)
+            showBottomMenu(false)
             SettingsScreen()
         }
     }
