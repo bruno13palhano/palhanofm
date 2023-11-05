@@ -32,8 +32,10 @@ import com.bruno13palhano.palhanofm.ui.components.DrawerMenu
 import com.bruno13palhano.palhanofm.ui.navigation.MainDestinations
 import com.bruno13palhano.palhanofm.ui.navigation.MainNavGraph
 import com.bruno13palhano.palhanofm.ui.theme.PalhanoFMTheme
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
