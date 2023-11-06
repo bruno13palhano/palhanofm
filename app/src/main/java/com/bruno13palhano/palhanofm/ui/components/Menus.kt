@@ -11,7 +11,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Card
@@ -36,6 +35,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -47,6 +47,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import coil.compose.rememberAsyncImagePainter
 import com.bruno13palhano.palhanofm.R
 import com.bruno13palhano.palhanofm.ui.navigation.MainDestinations
 import kotlinx.coroutines.launch
@@ -84,21 +85,23 @@ fun DrawerMenu(
                             if (orientation == Configuration.ORIENTATION_PORTRAIT) {
                                 Image(
                                     modifier = Modifier
-                                        .padding(16.dp)
                                         .fillMaxWidth()
-                                        .sizeIn(minHeight = 208.dp),
-                                    imageVector = Icons.Filled.Image,
-                                    contentDescription = stringResource(id = R.string.app_logo_label)
+                                        .sizeIn(minHeight = 320.dp),
+                                    painter = rememberAsyncImagePainter(model = R.drawable.app_logo_1),
+                                    contentDescription = stringResource(id = R.string.app_logo_label),
+                                    contentScale = ContentScale.Crop
                                 )
                             }
-                            Text(
-                                modifier = Modifier
-                                    .padding(vertical = 16.dp)
-                                    .fillMaxWidth(),
-                                text = stringResource(id = R.string.app_name),
-                                textAlign = TextAlign.Center,
-                                style = MaterialTheme.typography.titleLarge
-                            )
+                            if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                                Text(
+                                    modifier = Modifier
+                                        .padding(vertical = 16.dp)
+                                        .fillMaxWidth(),
+                                    text = stringResource(id = R.string.app_name),
+                                    textAlign = TextAlign.Center,
+                                    style = MaterialTheme.typography.titleLarge
+                                )
+                            }
                         }
                     }
                     items(
