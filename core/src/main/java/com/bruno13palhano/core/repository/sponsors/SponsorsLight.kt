@@ -1,9 +1,8 @@
-package com.bruno13palhano.core.repository
+package com.bruno13palhano.core.repository.sponsors
 
 import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import cache.SponsorsTableQueries
-import com.bruno13palhano.core.SponsorsData
 import com.bruno13palhano.core.model.Sponsor
 import com.bruno13palhano.core.network.Dispatcher
 import com.bruno13palhano.core.network.PFDispatchers.IO
