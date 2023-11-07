@@ -1,4 +1,4 @@
-package com.bruno13palhano.core.di
+package com.bruno13palhano.core.repository.di
 
 import com.bruno13palhano.core.SponsorsData
 import com.bruno13palhano.core.model.Sponsor

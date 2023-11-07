@@ -7,6 +7,6 @@ import com.bruno13palhano.cache.PalhanoFmDatabase
 
 internal class DriverFactory(private val context: Context) {
     fun createDriver(): SqlDriver {
-        return AndroidSqliteDriver(PalhanoFmDatabase.Schema, context)
+        return AndroidSqliteDriver(PalhanoFmDatabase.Schema, context, "PalhanoFm.db")
     }
 }
