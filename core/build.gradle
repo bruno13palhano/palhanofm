@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id("app.cash.sqldelight") version "2.0.0-alpha05"
 }
 
 android {
@@ -32,6 +33,14 @@ android {
     }
 }
 
+sqldelight {
+    databases {
+        create("PalhanoFmDatabase") {
+            packageName.set("com.bruno13palhano.cache")
+        }
+    }
+}
+
 dependencies {
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -44,4 +53,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.13.0'
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation("app.cash.sqldelight:android-driver:2.0.0-alpha05")
+    implementation("app.cash.sqldelight:coroutines-extensions:2.0.0-alpha05")
 }
