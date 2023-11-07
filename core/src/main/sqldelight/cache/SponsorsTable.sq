@@ -1,0 +1,19 @@
+CREATE TABLE SponsorsTable (
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    imageUrl TEXT NOT NULL,
+    contact TEXT NOT NULL
+);
+
+insert:
+INSERT OR REPLACE INTO SponsorsTable(id, name, imageUrl, contact)
+VALUES(?,?,?,?);
+
+update:
+UPDATE SponsorsTable SET name = ?, imageUrl = ?, contact = ? WHERE id = ?;
+
+delete:
+DELETE FROM SponsorsTable WHERE id = id;
+
+getAll:
+SELECT SponsorsTable.* FROM SponsorsTable;
