@@ -1,4 +1,4 @@
-package com.bruno13palhano.core
+package com.bruno13palhano.core.repository
 
 import kotlinx.coroutines.flow.Flow
 
