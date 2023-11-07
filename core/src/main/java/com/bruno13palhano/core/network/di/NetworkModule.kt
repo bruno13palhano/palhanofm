@@ -10,7 +10,7 @@ import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @Qualifier
-annotation class SponsorsNet
+internal annotation class SponsorsNet
 
 @Module
 @InstallIn(SingletonComponent::class)
