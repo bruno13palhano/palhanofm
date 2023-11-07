@@ -1,4 +1,4 @@
-package com.bruno13palhano.core.network.di
+package com.bruno13palhano.core.di
 
 import com.bruno13palhano.core.network.Dispatcher
 import com.bruno13palhano.core.network.PFDispatchers
