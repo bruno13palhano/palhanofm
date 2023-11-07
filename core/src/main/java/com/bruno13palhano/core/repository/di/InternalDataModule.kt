@@ -1,8 +1,8 @@
 package com.bruno13palhano.core.repository.di
 
-import com.bruno13palhano.core.SponsorsData
+import com.bruno13palhano.core.repository.sponsors.SponsorsData
 import com.bruno13palhano.core.model.Sponsor
-import com.bruno13palhano.core.repository.SponsorsLight
+import com.bruno13palhano.core.repository.sponsors.SponsorsLight
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
