@@ -1,0 +1,20 @@
+CREATE TABLE SchedulesTable (
+    id INTEGER NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    broadcaster TEXT NOT NULL,
+    startTime TEXT NOT NULL,
+    endTime TEXT NOT NULL
+);
+
+insert:
+INSERT OR REPLACE INTO SchedulesTable(id, title, broadcaster, startTime, endTime)
+VALUES(?,?,?,?,?);
+
+update:
+UPDATE SchedulesTable SET title = ?, broadcaster = ?, startTime = ?, endTime = ? WHERE id = ?;
+
+getAll:
+SELECT SchedulesTable.* FROM SchedulesTable;
+
+getLastId:
+SELECT last_insert_rowid();
