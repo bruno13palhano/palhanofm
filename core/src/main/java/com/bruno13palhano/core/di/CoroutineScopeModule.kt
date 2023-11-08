@@ -1,7 +1,6 @@
 package com.bruno13palhano.core.di
 
-import com.bruno13palhano.core.network.Dispatcher
-import com.bruno13palhano.core.network.PFDispatchers.DEFAULT
+import com.bruno13palhano.core.di.PFDispatchers.DEFAULT
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

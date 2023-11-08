@@ -1,4 +1,4 @@
-package com.bruno13palhano.core.network
+package com.bruno13palhano.core.di
 
 import javax.inject.Qualifier
 
