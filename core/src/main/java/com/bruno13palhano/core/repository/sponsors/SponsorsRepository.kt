@@ -2,7 +2,7 @@ package com.bruno13palhano.core.repository.sponsors
 
 import com.bruno13palhano.core.repository.di.InternalSponsorsLight
 import com.bruno13palhano.core.model.Sponsor
-import com.bruno13palhano.core.network.SponsorsNetwork
+import com.bruno13palhano.core.network.sponsors.SponsorsNetwork
 import com.bruno13palhano.core.network.di.SponsorsNet
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

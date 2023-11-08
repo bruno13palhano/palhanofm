@@ -1,6 +1,7 @@
-package com.bruno13palhano.core.network
+package com.bruno13palhano.core.network.sponsors
 
 import com.bruno13palhano.core.model.Sponsor
+import com.bruno13palhano.core.network.Service
 import com.bruno13palhano.core.network.model.asExternal
 import java.lang.Exception
 import javax.inject.Inject

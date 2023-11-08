@@ -1,7 +1,7 @@
 package com.bruno13palhano.core.network.di
 
-import com.bruno13palhano.core.network.SponsorsNetwork
-import com.bruno13palhano.core.network.SponsorsNetworkImpl
+import com.bruno13palhano.core.network.sponsors.SponsorsNetwork
+import com.bruno13palhano.core.network.sponsors.SponsorsNetworkImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
