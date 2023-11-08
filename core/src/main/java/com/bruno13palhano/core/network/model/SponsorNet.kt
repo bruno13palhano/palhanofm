@@ -18,11 +18,3 @@ internal fun SponsorNet.asExternal() = Sponsor(
     url = url,
     contact = contact
 )
-
-internal fun Sponsor.asInternal() = SponsorNet(
-    id = id,
-    name = name,
-    imageUrl = imageUrl,
-    url = url,
-    contact = contact
-)
