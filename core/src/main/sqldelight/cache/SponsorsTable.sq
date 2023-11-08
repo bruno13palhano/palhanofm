@@ -13,9 +13,6 @@ VALUES(?,?,?,?,?);
 update:
 UPDATE SponsorsTable SET name = ?, imageUrl = ?, url = ?, contact = ? WHERE id = ?;
 
-delete:
-DELETE FROM SponsorsTable WHERE id = id;
-
 getAll:
 SELECT SponsorsTable.* FROM SponsorsTable;
 
