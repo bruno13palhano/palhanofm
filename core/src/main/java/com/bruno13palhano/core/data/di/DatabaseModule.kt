@@ -1,6 +1,7 @@
 package com.bruno13palhano.core.data.di
 
 import android.content.Context
+import cache.SchedulesTableQueries
 import cache.SponsorsTableQueries
 import com.bruno13palhano.cache.PalhanoFmDatabase
 import com.bruno13palhano.core.data.database.DatabaseFactory
@@ -31,4 +32,10 @@ internal object DatabaseModule {
     fun providesSponsorsTable(
         database: PalhanoFmDatabase
     ): SponsorsTableQueries = database.sponsorsTableQueries
+
+    @Provides
+    @Singleton
+    fun providesSchedulesTable(
+        database: PalhanoFmDatabase
+    ): SchedulesTableQueries = database.schedulesTableQueries
 }
