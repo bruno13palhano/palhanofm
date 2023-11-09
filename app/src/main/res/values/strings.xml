@@ -15,6 +15,6 @@
     <string name="drawer_menu_description">Drawer menu</string>
     <string name="current_sponsor_description">Current sponsor</string>
     <string name="with_tag">with %s</string>
-    <string name="from_tag">from %s</string>
-    <string name="to_tag">to %s</string>
+    <string name="from_tag">from %sh</string>
+    <string name="to_tag">to %sh</string>
 </resources>
